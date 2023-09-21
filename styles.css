@@ -51,4 +51,13 @@ header img{
     font-size: 16px;
     resize: none;
 }
-
+/*ID proyecto*/
+#proyecto{
+    display: flex;
+    justify-content: space-between;
+}
+/*Clase columna*/
+.columna{
+    flex: auto;
+    margin: 10px;
+}
