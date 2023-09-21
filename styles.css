@@ -1,0 +1,54 @@
+body{
+    background: linear-gradient(to right,rgb(116, 116, 206),pink);
+    font-family: sans-serif;
+}
+nav{
+    background:linear-gradient(to left,rgb(74, 74, 141),rgb(173, 155, 155));
+}
+nav a{
+    color:#ececec;
+    font-size: large;
+}
+#contenedor-header{
+    display: flex;
+}
+header h1{
+    color: #fff;
+    text-align: center;
+}
+header img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Los # son los id*/
+#FormularioDeContacto{
+    width: 300px;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+#FormularioDeContacto label{
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+#FormularioDeContacto{
+    border:inherit;
+    margin-top: 100px;
+}
+#FormularioDeContacto #nombre{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+}
+#FormularioDeContacto textarea{
+    width: 100%;
+    height: 150px;
+    padding: auto;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #ececec;
+    font-size: 16px;
+    resize: none;
+}
+
