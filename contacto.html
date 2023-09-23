@@ -7,16 +7,22 @@
     <script src="validacion.js"></script> 
 </head>
 <body>
-    <nav>
-        <a href="index.html">Principal</a> 
-        <a href="articulo.html">Artículo</a> 
-    </nav>
+    <div class="contenedor-header">
+        <header>
+            <nav>
+            <a href="index.html">Principal</a> 
+            <a href="articulo.html">Artículo</a> 
+            </nav>
+        </header>
+    </div>
 <!-- Campos del formulario -->
+<div class="contact-box">
     <form id="FormularioDeContacto">
+        <h1>Formulario de contacto</h1>
         <label for="nombre">Nombre: </label><br>
         <input type="texto" id="nombre" name="nombre" required>
-        <label for="nombre">Apellido: </label><br>
-        <input type="texto" id="Apellido" name="Apellido" required>
+        <label for="apellido">Apellido: </label><br>
+        <input type="texto" id="apellido" name="apellido" required>
         <label for="email">Email: </label><br>
         <input type="email" id="email" name="email" required><br>
         <label for="mensaje">Mensaje:</label><br>
@@ -25,5 +31,6 @@
         <!-- validaciones en JavaScript -->
 
     </form>
+</div>
 </body>
 </html>

@@ -4,12 +4,17 @@
 <head>
     <title>sobreMi</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="validacion.js"></script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Principal</a> 
-        <a href="contacto.html">Contacto</a>
+    <div class="contenedor-header">
+        <header>
+            <nav>
+            <a href="index.html">Principal</a> 
+            <a href="contacto.html">Contacto</a>
+        </header>
     </nav>
+</div>
     <!-- Contenido del artículo -->
     <div class="cont">
         <h1>Peñiñorey</h1>
@@ -22,13 +27,20 @@
                 incorporar conocimiento en la Ciberseguridad.
             </p>
         </p>
-    <br>
     </div>
     <!-- carrusel de imagenes de los proyectos-->
-    <div id="carrousel">
-        <img id="imagenCarrousel" src="" alt="imagen Carrousel">
-        <button id="anteriorBoton">Anterior</button>
-        <button id="siguienteBoton">Siguiente</button>
+    <div id="carrusel">
+        <div class="slide">
+            <img src="/images/Carga de Productos.png" alt="imagen">
+        </div>
+        <div class="slide">
+            <img src="images/Empresa-Empleados1.png" alt="imagen">
+        </div>
+        <div class="slide">
+            <img src="images/GestionProductos1.png" alt="imagen">
+        </div>
     </div>
+        <button id="anterior">Anterior</button>
+        <button id="siguiente">Siguiente</button>
 </body>
 </html>
