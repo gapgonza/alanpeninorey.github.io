@@ -127,16 +127,14 @@ p{
     width: 300px;
     margin: 0 auto;
 }
-.slide{
-    flex: 0 0 auto;
-    width: 300px;
-    transition: transform 0.3s ease-in-out;
+.Myslides{
+    display: none;
 }
-img{
-    max-width: 100%;
+.img{
+    max-width: 30%;
     height: auto;
 }
-#anterior, #siguiente{
+.anterior, .siguiente{
     background-color: #3774b6;
     color: #fff;
     padding: 10px 10px;
@@ -144,6 +142,6 @@ img{
     margin: 10px;
     cursor: pointer;
 }
-#siguiente {
+.siguiente {
     background-color: #28a745;
 }

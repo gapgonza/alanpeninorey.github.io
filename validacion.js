@@ -1,22 +1,19 @@
 /*----------------------Carrusel de imagenes------------------------*/
-const carrusel = document.getElementById("carrusel");
-const slides = document.querySelectorAll(".slide");
-const anterior = document.getElementById("anterior");
-const siguiente = document.getElementById("siguiente");
-let currentIndex = 0;
+var slideIndex = 1;
+showDivs(slideIndex);
 
-anterior.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    actualizarCarrusel();
-});
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-siguiente.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    actualizarCarrusel();
-});
-
-function actualizarCarrusel() {
-    const translateX = -currentIndex * 100;
-    carrusel.style.transform = `translateX(${translateX}%)`;
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("Myslides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "flex";  
 }
 /*---------------Validaciones Formulario---------------------*/
