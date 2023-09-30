@@ -1,8 +1,16 @@
 /*------------------------------*Principal*--------------------------*/
+
+body{
+    background: url(images/fondo.jpg);
+    background-size: cover;
+}
+
 .contenedor-header {
     text-align: center;
-    padding: 10px;
-    margin: 2%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
 }
 .columna {
     float: left;
@@ -26,10 +34,15 @@
     text-align: center;
 }
 
+.principal img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*-----------------------*Fomulario de Contacto*----------------------*/
 .contenedor-header {
-    background:url('../alanpeninorey.github.io/images/fondo.jpg')no-repeat center top fixed;
 
 }
 .cont {
