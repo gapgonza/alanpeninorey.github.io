@@ -1,19 +1,14 @@
 /*----------------------Carrusel de imagenes------------------------*/
-var slideIndex = 1;
-showDivs(slideIndex);
+const carrusel = document.querySelector('.carrusel-items');
+let intervalo = null;
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+const start = () => {
+  intervalo = setInterval(function(params){
+    carrusel.scrollLeft = carrusel.scrollLeft + 20;
+  },10);
+};
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("Myslides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "flex";  
-}
+const stop = () => {};
+
+start();
 /*---------------Validaciones Formulario---------------------*/
