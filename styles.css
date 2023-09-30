@@ -1,6 +1,8 @@
 /*------------------------------*Principal*--------------------------*/
 .contenedor-header {
-    background: url(../alanpeninorey.github.io/images/fondo.jpg) no-repeat center top;
+    text-align: center;
+    padding: 10px;
+    margin: 2%;
 }
 .columna {
     float: left;
@@ -12,14 +14,35 @@
     background:#FFF;
     border-radius:8px;
     box-shadow:-6px -7px 9px rgba(0,0,0,.5);
+    
+}
+.principal {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.principal h1{
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
 /*-----------------------*Fomulario de Contacto*----------------------*/
 .contenedor-header {
+    background:url('../alanpeninorey.github.io/images/fondo.jpg')no-repeat center top fixed;
+
 }
 .cont {
 }
+
+
+/*-------------------------------*Contacto*-------------------------*/
+.contenedor-header {
+}
+.contact-box {
+}
+
+/*---------------------*Contenido del Carrusel*----------------------*/
 .carrusel {
 }
 .carrusel-items {
@@ -30,11 +53,3 @@
 }
 .siguiente {
 }
-
-/*-------------------------------*Contacto*-------------------------*/
-.contenedor-header {
-}
-.contact-box {
-}
-
-/*---------------------*Contenido del Carrusel*----------------------*/
