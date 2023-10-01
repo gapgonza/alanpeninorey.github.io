@@ -1,7 +1,7 @@
 /*------------------------------*Principal*--------------------------*/
 
 body {
-  background: url(images/fondo2.jpg);
+  /*background: url(images/fondo2.jpg);*/
   background-size: cover;
 }
 
@@ -96,14 +96,43 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #0056b3;
 }
+/*------------Articulo--------------*/
+.cont h2, h3{
+  text-transform: uppercase ;
+  text-align: center;
+}
 /*---------------------*Contenido del Carrusel*----------------------*/
 .carrusel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 .carrusel-items {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
 }
 .carrusel-item {
+  flex: 0 0 100%;
+  text-align: center;
 }
-.anterior {
+
+.carrusel-item img{
+  max-width: 100%;
+  height: auto;
 }
-.siguiente {
+
+.carrusel-buttons{
+  text-align: center;
+  margin-top: 0px;
+}
+.carrusel-button{
+  background-color: #007bff;
+  color: #fff2f2;
+  border: none;
+  padding: 10px 20px; /*tamaño del alto y el ancho*/
+  border-radius: 5px; /*lo que le da el redondel*/
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 10px;
 }
