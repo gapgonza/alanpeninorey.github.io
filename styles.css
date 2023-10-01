@@ -1,77 +1,101 @@
 /*------------------------------*Principal*--------------------------*/
 
-body{
-    background: url(images/fondo2.jpg);
-    background-size: cover;
+body {
+  background: url(images/fondo2.jpg);
+  background-size: cover;
 }
 
-nav a{
-    font-size: 25px;
-    color: rgb(82, 109, 7);
-    margin: 20px;
-    border: 1px solid rgb(106, 138, 18); /* Borde del botón */
-    border-radius: 5px; /* Borde redondeado */
-    display: inline-block; /* Hacer que los botones sean elementos en línea */
+nav a {
+  font-size: 25px;
+  color: rgb(82, 109, 7);
+  margin: 20px;
+  border: 1px solid rgb(106, 138, 18); /* Borde del botón */
+  border-radius: 5px; /* Borde redondeado */
+  display: inline-block; /* Hacer que los botones sean elementos en línea */
 }
 
 nav a:hover {
-    background-color: rgb(106, 138, 18);
-    color: #fff;
+  background-color: rgb(106, 138, 18);
+  color: #fff;
 }
 .contenedor-header {
-    background-color: #dfcdcd;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #dfcdcd;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-.proyecto{
-    display: flex;
-    justify-content: center; /*Para centrar el contenido*/
+.proyecto {
+  display: flex;
+  justify-content: center; /*Para centrar el contenido*/
 }
 .columna {
-    float: left;
-    width: 30%; /*Ancho de la columna*/
-    padding:15px ;
-    margin :2%;
-    border: solid #4CAF50;
-    border-width: thin medium thick;
-    background:#FFF;
-    border-radius:8px;
-    box-shadow:-6px -7px 9px rgba(0,0,0,.5);
-    
+  float: left;
+  width: 30%; /*Ancho de la columna*/
+  padding: 15px;
+  margin: 2%;
+  border: solid #4caf50;
+  border-width: thin medium thick;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: -6px -7px 9px rgba(0, 0, 0, 0.5);
 }
 .principal {
-    margin: auto;
-    max-width: 1200px;
+  margin: auto;
+  max-width: 1200px;
 }
 
-.principal h1{
-    text-transform: uppercase;
-    text-align: center;
+.principal h1 {
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.principal img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.principal img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 /*-----------------------*Fomulario de Contacto*----------------------*/
-.contenedor-header {
 
-}
-.cont {
-}
-
-
-/*-------------------------------*Contacto*-------------------------*/
-.contenedor-header {
-}
 .contact-box {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.FormularioDeContacto label,input,textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
 /*---------------------*Contenido del Carrusel*----------------------*/
 .carrusel {
 }
