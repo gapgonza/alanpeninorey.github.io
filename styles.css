@@ -97,9 +97,21 @@ input[type="submit"]:hover {
   background-color: #0056b3;
 }
 /*------------Articulo--------------*/
-.cont h2, h3{
+.cont{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.cont img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.cont h2, h3, p{
   text-transform: uppercase ;
   text-align: center;
+  color: rgb(255, 255, 255);
 }
 /*---------------------*Contenido del Carrusel*----------------------*/
 .carrusel {
