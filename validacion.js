@@ -23,3 +23,4 @@ var imgActual = 1; /*para iniciar en la 1ra imagen*/
             x[imgActual - 1].style.display = "block";
         }
 /*---------------Validaciones Formulario---------------------*/
+const nombre = document.getElementById("nombre");
