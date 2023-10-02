@@ -124,6 +124,7 @@ input[type="submit"]:hover {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
 /*---------------------*Contenido del Carrusel*----------------------*/
 .carrusel {
     position: relative;
