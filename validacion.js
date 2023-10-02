@@ -18,9 +18,9 @@ var imgActual = 1; /*para iniciar en la 1ra imagen*/
                 imgActual = x.length;
             }
             for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+                x[i].styles.display = "none";
             }
-            x[imgActual - 1].style.display = "block";
+            x[imgActual - 1].styles.display = "block";
         }
 /*---------------Validaciones Formulario---------------------*/
 const nombre = document.getElementById("nombre");
