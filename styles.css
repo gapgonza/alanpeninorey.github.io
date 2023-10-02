@@ -40,6 +40,9 @@ nav a:hover {
   border-radius: 8px;
   box-shadow: -6px -7px 9px rgba(0, 0, 0, 0.5);
 }
+.columna p{
+  color: #000;
+}
 .principal {
   margin: auto;
   max-width: 1200px;
@@ -79,7 +82,8 @@ h1 {
   width: 100%;
 }
 textarea {
-  padding: 10px;
+  padding: 0px;
+  height: 150px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
@@ -101,6 +105,11 @@ input[type="submit"]:hover {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-image: url(/images/fondo2.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 .cont img{
   max-width: 100%;
@@ -108,10 +117,12 @@ input[type="submit"]:hover {
   display: block;
   margin: 0 auto;
 }
-.cont h2, h3, p{
-  text-transform: uppercase ;
-  text-align: center;
-  color: rgb(255, 255, 255);
+.cont h1, .cont h2, .cont h3,.cont p{
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 /*---------------------*Contenido del Carrusel*----------------------*/
 .carrusel {
