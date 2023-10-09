@@ -39,4 +39,11 @@
         var telefono = document.getElementById("telefono").value;
         var mensaje = document.getElementById("mensaje").value;
 
+        // Validar que todos los campos estén completos
+        if (nombre === "" || apellido === "" || email === "" || telefono === "" || mensaje === "") {
+            alert("Todos los campos son obligatorios. Por favor, complete todos los campos.");
+            return false; // Impide el envío del formulario
+        }
+
+        
     }
