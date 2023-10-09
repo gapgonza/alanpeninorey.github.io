@@ -31,4 +31,12 @@
     });
     /*-----------------------------Validacion formulario-------------------------------*/
 
+    function enviarFormulario() {
+        // Obtener los valores de los campos del formulario
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var email = document.getElementById("email").value;
+        var telefono = document.getElementById("telefono").value;
+        var mensaje = document.getElementById("mensaje").value;
 
+    }
