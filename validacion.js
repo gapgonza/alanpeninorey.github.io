@@ -1,30 +1,22 @@
 /*----------------------Carrusel de imagenes------------------------*/
-/*var imgActual = 1; /*para iniciar en la 1ra imagen*/
-        /*mostrarImg(imgActual);
+ // JavaScript para el carrusel
+ const carruselItems = document.querySelector('.carrusel-items');
+ const carruselButtonAnterior = document.getElementById('anterior');
+ const carruselButtonSiguiente = document.getElementById('siguiente');
+ const carruselItemWidth = document.querySelector('.carrusel-item').clientWidth;
+ let currentPosition = 0;
 
-        /*con un argumento n, se llama cuando clickeamos los botones*/
-       /* function plusDivs(n) { 
-            mostrarImg(imgActual += n);/*actualiza sumando n*/
-       /* }
+ carruselButtonAnterior.addEventListener('click', () => {
+     if (currentPosition > 0) {
+         currentPosition -= carruselItemWidth;
+         carruselItems.style.transform = `translateX(-${currentPosition}px)`;
+     }
+ });
 
-        function mostrarImg(n) {
-            var i;
-            /*almaceno todos los elementos*/
-           /* var x = document.getElementsByClassName("carrusel-item");
-            if (n > x.length) {
-                imgActual = 1;
-            }
-            if (n < 1) {
-                imgActual = x.length;
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].styles.display = "none";
-            }
-            x[imgActual - 1].styles.display = "block";
-        }*/
-var slideIndex = 0;
-function showSlides(){
-    
-}
-/*---------------Validaciones Formulario---------------------*/
-const nombre = document.getElementById("nombre");
+ carruselButtonSiguiente.addEventListener('click', () => {
+     const numItems = document.querySelectorAll('.carrusel-item').length;
+     if (currentPosition < (numItems - 1) * carruselItemWidth) {
+         currentPosition += carruselItemWidth;
+         carruselItems.style.transform = `translateX(-${currentPosition}px)`;
+     }
+ });
