@@ -44,6 +44,15 @@
             alert("Todos los campos son obligatorios. Por favor, complete todos los campos.");
             return false; // Impide el envío del formulario
         }
+        // Validar el formato del número de teléfono (opcional)
+        var telefonoPattern = /^[0-9]{8,12}$/;
+        if (!telefonoPattern.test(telefono)) {
+            alert("El número de teléfono debe contener entre 8 y 12 dígitos numéricos.");
+            return false; // Impide el envío del formulario
+        }
 
+        // Simular un envío ficticio del formulario
+        alert("El formulario se ha enviado ficticiamente. Los datos no se envían al servidor.");
+        return false; // Impide el envío del formulario
         
     }
