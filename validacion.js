@@ -31,28 +31,78 @@
     });
     /*-----------------------------Validacion formulario-------------------------------*/
 
-    function enviarFormulario() {
-        // Obtener los valores de los campos del formulario
-        var nombre = document.getElementById("nombre").value;
-        var apellido = document.getElementById("apellido").value;
-        var email = document.getElementById("email").value;
-        var telefono = document.getElementById("telefono").value;
-        var mensaje = document.getElementById("mensaje").value;
+    function validar() {
+        var nombre = document.getElementById('nombre');
+        var apellido = document.getElementById('apellido');
+        var email = document.getElementById('email');
+        var telefono = document.getElementById('telefono');
+        var mensaje = document.getElementById('mensaje');
 
-        // Validar que todos los campos estén completos
-        if (nombre === "" || apellido === "" || email === "" || telefono === "" || mensaje === "") {
-            alert("Todos los campos son obligatorios. Por favor, complete todos los campos.");
-            return false; // Impide el envío del formulario
-        }
-        // Validar el formato del número de teléfono (opcional)
-        var telefonoPattern = /^[0-9]{8,12}$/;
-        if (!telefonoPattern.test(telefono)) {
-            alert("El número de teléfono debe contener entre 8 y 12 dígitos numéricos.");
-            return false; // Impide el envío del formulario
+        // Limpiar errores previos
+        nombre.classList.remove('error');
+        apellido.classList.remove('error');
+        email.classList.remove('error');
+        telefono.classList.remove('error');
+        mensaje.classList.remove('error');
+
+        var errores = [];
+
+        // Validar nombre
+        if (nombre.value === '') {
+            errores.push('Nombre es obligatorio');
+            nombre.classList.add('error');
         }
 
-        // Simular un envío ficticio del formulario
-        alert("El formulario se ha enviado ficticiamente. Los datos no se envían al servidor.");
-        return false; // Impide el envío del formulario
-        
-    }
+        // Validar apellido
+        if (apellido.value === '') {
+            errores.push('Apellido es obligatorio');
+            apellido.classList.add('error');
+        }
+
+        // Validar email
+        if (email.value === '') {
+            errores.push('Email es obligatorio');
+            email.classList.add('error');
+        }
+
+         // Validar teléfono
+         if (telefono.value !== '' && (isNaN(telefono.value) || telefono.value.length !== 10 || telefono.value.startsWith('0'))) {
+             errores.push('Teléfono debe ser un número de 10 dígitos y no puede comenzar con cero');
+             telefono.classList.add('error');
+         }
+
+         // Validar mensaje
+         if (mensaje.value === '') {
+             errores.push('Mensaje es obligatorio');
+             mensaje.classList.add('error');
+         }
+
+         // Mostrar errores
+         errores.forEach(function(error) {
+             var li = document.createElement('li');
+             li.textContent = error;
+             document.getElementById('mensajes').appendChild(li);
+         });
+
+         // Si no hay errores, agregar mensaje a la lista
+         if (errores.length === 0) {
+             var mensajeFinal = 'Hola ' + nombre.value + ' ' + apellido.value + ', ';
+             if (telefono.value !== '') {
+                 mensajeFinal += 'te llamaremos al ' + telefono.value + '. ';
+             }
+             mensajeFinal += 'Tu mensaje fue: ' + mensaje.value;
+             
+             var li = document.createElement('li');
+             li.textContent = mensajeFinal;
+             document.getElementById('mensajes').appendChild(li);
+
+             // Limpiar campos del formulario
+             nombre.value = '';
+             apellido.value = '';
+             email.value = '';
+             telefono.value = '';
+             mensaje.value = '';
+         }
+
+         return false;  // Prevenir el envío del formulario
+     }

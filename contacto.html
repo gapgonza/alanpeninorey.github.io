@@ -16,7 +16,7 @@
         </header>
     </div>
 <!-- Campos del formulario -->
-<div class="contact-box">
+<div class="contact-box" onsubmit="return ">
     <form id="FormularioDeContacto">
         <h1>Formulario de contacto</h1>
         <label for="nombre">Nombre: </label><br>
@@ -29,7 +29,7 @@
         <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,12}" required>
         <label for="mensaje">Mensaje:</label><br>
         <textarea id="mensaje" name="mensaje" required></textarea>
-        <input type="submit" value="Enviar">
+        <input type="button" value="Enviar">
         <!-- validaciones en JavaScript -->
 
     </form>
