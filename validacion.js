@@ -32,21 +32,17 @@
     /*-----------------------------Validacion formulario-------------------------------*/
 
     function validar() {
-        var nombre = document.getElementById('nombre');
-        var apellido = document.getElementById('apellido');
-        var email = document.getElementById('email');
-        var telefono = document.getElementById('telefono');
+        let fnombre = document.getElementById('fnombre');
+        let nombre = fnombre.value.trim();
+        var fapellido = document.getElementById('fapellido');
+        let apellido = fapellido.value.trim();
+        var femail = document.getElementById('femail');
+        let email = femail.value;
+        var ftelefono = document.getElementById('ftelefono');
+        let telefono=ftelefono.value;
         var mensaje = document.getElementById('mensaje');
-
-        // Limpiar errores previos
-        nombre.classList.remove('error');
-        apellido.classList.remove('error');
-        email.classList.remove('error');
-        telefono.classList.remove('error');
-        mensaje.classList.remove('error');
-
-        var errores = [];
-
+        let errores = [];
+        let campo_error = null;
         // Validar nombre
         if (nombre.value === '') {
             errores.push('Nombre es obligatorio');
