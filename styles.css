@@ -70,45 +70,20 @@ nav a:hover {
 
 /*-----------------------*Fomulario de Contacto*----------------------*/
 
-.contact-box {
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+.error{
+  border: 1px solid red;
+}
+#errorInput{
+  border: 1px solid red;
+  padding: 5px;
+  display: none;
+}
+#errorInput p{
+  color: red;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
-}
 
-.FormularioDeContacto label,input,textarea {
-  display: block;
-  margin-bottom: 10px;
-  width: 100%;
-}
-textarea {
-  padding: 0px;
-  height: 150px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-}
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
+
 /*------------Articulo--------------*/
 .cont{
   max-width: 800px;

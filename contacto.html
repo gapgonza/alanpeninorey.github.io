@@ -16,23 +16,24 @@
         </header>
     </div>
 <!-- Campos del formulario -->
-<div class="contact-box" onsubmit="return validar()">
-    <form id="FormularioDeContacto">
-        <h1>Formulario de contacto</h1>
-        <label for="fnombre">Nombre: </label><br>
-        <input type="texto" id="nombre" name="nombre" required>
-        <label for="fapellido">Apellido: </label><br>
-        <input type="texto" id="apellido" name="apellido" required>
-        <label for="femail">Email: </label><br>
-        <input type="email" id="email" name="email" required>
-        <label for="ftelefono">Telefono: </label>
-        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,12}" required>
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-        <input type="submit" value="Enviar">
-        <!-- validaciones en JavaScript -->
+<h1>Formulario de contacto</h1>
+<form onsubmit="return validar()" id="FormularioDeContacto">
+        <label class="cont_form" for="fnombre">Nombre: </label>
+        <input class="cont_" id="fnombre" name="fnombre" >
+        <label class="cont_form" for="fapellido">Apellido: </label>
+        <input class="cont_" id="fapellido" name="fapellido">
+        <label class="cont_form" for="femail">Email: </label>
+        <input class="cont_" id="femail" name="femail" >
+        <label class="cont_form" for="ftelefono">Telefono: </label>
+        <input class="cont_" id="ftelefono" name="ftelefono" >
+        <label class="cont_form" for="fmensaje">Mensaje:</label>
+        <textarea id="fmensaje" name="fmensaje" ></textarea>
+        <button type="submit" class="input-submit" id="btnenviar">ENVIAR</button>
+            <div id="errorInput">
+                </div>
+</form>
+<p id="pEnviar"></p>
 
-    </form>
-</div>
+<ul id="ltaErrores"></ul>
 </body>
 </html>

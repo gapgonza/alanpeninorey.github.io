@@ -31,74 +31,70 @@
     });
     /*-----------------------------Validacion formulario-------------------------------*/
 
-    function validar() {
-        let fnombre = document.getElementById('fnombre');
+    var emailpattern = /^\w+@\w+(\.\w{2,4})+$/;
+    var formpattern = /^[a-zA-Z]+$/;
+
+    const btnenviar = document.getElementById("btnenviar");
+    const ltaErrores = document.getElementById("ltaErrores");
+    function validar(){
+        let fnombre = document.getElementById("fnombre");
         let nombre = fnombre.value.trim();
-        var fapellido = document.getElementById('fapellido');
+
+        let fapellido = document.getElementById("fapellido");
         let apellido = fapellido.value.trim();
-        var femail = document.getElementById('femail');
+
+        let femail = document.getElementById("femail");
         let email = femail.value;
-        var ftelefono = document.getElementById('ftelefono');
-        let telefono=ftelefono.value;
-        var mensaje = document.getElementById('mensaje');
+
+        let ftelefono = document.getElementById("ftelefono");
+        let telefono = ftelefono.value;
+
+        let fmensaje = document.getElementById("fmensaje");
+        let mensaje = fmensaje.value;
+
         let errores = [];
         let campo_error = null;
-        // Validar nombre
-        if (nombre.value === '') {
-            errores.push('Nombre es obligatorio');
-            nombre.classList.add('error');
+
+        let FormularioDeContacto = document.getElementById("FormularioDeContacto");
+
+        for (v of FormularioDeContacto.querySelectorAll("input,select,div")) {
+            v.classList.remove("error");
+           }
+
+        if(nombre == ""){
+            errores.push("Falta el nombre");
+            campo_error = fnombre;
+            fnombre.classList.add("error");
+        }
+        if(apellido == ""){
+            errores.push("Falta el apellido");
+            campo_error = fapellido;
+            fapellido.classList.add("error");
+        }
+        if(email == ""){
+            errores.push("Falta el nombre");
+            campo_error = femail;
+            femail.classList.add("error");
+        }
+        if(telefono == ""){
+            errores.push("Falta el nombre");
+            campo_error = ftelefono;
+            ftelefono.classList.add("error");
         }
 
-        // Validar apellido
-        if (apellido.value === '') {
-            errores.push('Apellido es obligatorio');
-            apellido.classList.add('error');
+        ltaErrores.innerHTML = "";
+        if(errores.length > 0){
+            for(let i=0;i<errores.length;i++){
+                let li=document.createElement("li");
+                li.innerHTML=errores[i];
+                ltaErrores.appendChild(li);
+            }
+            if(campo_error !=null){
+                campo_error.focus();
+            }
+            return false;
         }
-
-        // Validar email
-        if (email.value === '') {
-            errores.push('Email es obligatorio');
-            email.classList.add('error');
-        }
-
-         // Validar teléfono
-         if (telefono.value !== '' && (isNaN(telefono.value) || telefono.value.length !== 10 || telefono.value.startsWith('0'))) {
-             errores.push('Teléfono debe ser un número de 10 dígitos y no puede comenzar con cero');
-             telefono.classList.add('error');
-         }
-
-         // Validar mensaje
-         if (mensaje.value === '') {
-             errores.push('Mensaje es obligatorio');
-             mensaje.classList.add('error');
-         }
-
-         // Mostrar errores
-         errores.forEach(function(error) {
-             var li = document.createElement('li');
-             li.textContent = error;
-             document.getElementById('mensajes').appendChild(li);
-         });
-
-         // Si no hay errores, agregar mensaje a la lista
-         if (errores.length === 0) {
-             var mensajeFinal = 'Hola ' + nombre.value + ' ' + apellido.value + ', ';
-             if (telefono.value !== '') {
-                 mensajeFinal += 'te llamaremos al ' + telefono.value + '. ';
-             }
-             mensajeFinal += 'Tu mensaje fue: ' + mensaje.value;
-             
-             var li = document.createElement('li');
-             li.textContent = mensajeFinal;
-             document.getElementById('mensajes').appendChild(li);
-
-             // Limpiar campos del formulario
-             nombre.value = '';
-             apellido.value = '';
-             email.value = '';
-             telefono.value = '';
-             mensaje.value = '';
-         }
-
-         return false;  // Prevenir el envío del formulario
-     }
+        let msj = 'Hola ${nombre} ${apellido}, ¡Muchas gracias por su msj';
+        pEnviar.innerHTML = msj;
+        return false;
+}
