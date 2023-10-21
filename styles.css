@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
   background: url(images/fondo2.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
   margin: 0;
@@ -24,7 +25,7 @@ nav a:hover {
 .contenedor-header {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(70,121,159,1) 75%, rgba(29,0,255,1) 86%);
-  color: #fff;
+  color: white;
   padding: 20px;
   text-align: center;
 }
@@ -70,6 +71,42 @@ nav a:hover {
 
 /*-----------------------*Fomulario de Contacto*----------------------*/
 
+.contenedorgeneral{
+  display: flex;
+  padding: 1rem 5rem 1rem 5rem;
+  background: rgb(100 100 100 / 59%);
+  flex-direction: column;
+}
+
+.contenedorgeneral h1{
+  margin: 0 auto;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 40rem;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.contenedorgeneral form textarea{
+  width: 634px;
+  height: 126px;
+}
+.contenedorgeneral form button{
+  background-color: #484d96;
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+  border: solid 3px #35325a;
+  margin: 0 auto;
+}
+
+.contenedorgeneral form button:hover{
+  background-color: #618f67;
+  border-color:#416e47;
+}
 .error{
   border: 1px solid red;
 }

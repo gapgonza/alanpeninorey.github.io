@@ -57,7 +57,7 @@
 
         let FormularioDeContacto = document.getElementById("FormularioDeContacto");
 
-        for (v of FormularioDeContacto.querySelectorAll("input,select,div")) {
+        for (v of FormularioDeContacto.querySelectorAll("input,div")) {
             v.classList.remove("error");
            }
 
@@ -72,12 +72,12 @@
             fapellido.classList.add("error");
         }
         if(email == ""){
-            errores.push("Falta el nombre");
+            errores.push("Falta el email");
             campo_error = femail;
             femail.classList.add("error");
         }
         if(telefono == ""){
-            errores.push("Falta el nombre");
+            errores.push("Falta el telefono");
             campo_error = ftelefono;
             ftelefono.classList.add("error");
         }
@@ -94,7 +94,7 @@
             }
             return false;
         }
-        let msj = 'Hola ${nombre} ${apellido}, ¡Muchas gracias por su msj';
+        let msj = `Hola ${nombre} ${apellido}, ¡Muchas gracias por su msj`;
         pEnviar.innerHTML = msj;
         return false;
 }
