@@ -18,7 +18,7 @@
 <!-- Campos del formulario -->
 <div class="contenedorgeneral">
 <h1>Formulario de contacto</h1>
-<form onsubmit="return validar()" id="FormularioDeContacto">
+<form onsubmit="return validar(event)" id="FormularioDeContacto">
         <label class="Acont forme" for="fnombre">Nombre: </label>
         <input class="cont_" id="fnombre" name="fnombre" >
         <label class="Acont forme" for="fapellido">Apellido: </label>
@@ -30,13 +30,13 @@
         <label class="Acont forme" for="fmensaje">Mensaje:</label>
         <textarea id="fmensaje" for="mensaje" name="fmensaje" ></textarea>
         <button class="Acont forme2" type="submit" id="btnenviar">ENVIAR</button>
-            <div id="errorInput">
-                </div>
+        <div id="errorInput"> </div>
+                
 </form>
 <p id="pEnviar"></p>
 
-<div id></div>
-<ul id="ltaErrores"></ul>
+
+
 </div>
 </body>
 </html>

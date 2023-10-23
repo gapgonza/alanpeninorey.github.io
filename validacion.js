@@ -1,5 +1,5 @@
 /*----------------------Carrusel de imagenes------------------------*/
-    const carruselItems = document.querySelector('.carrusel-items');//almacenamos los elementos
+    /*const carruselItems = document.querySelector('.carrusel-items');//almacenamos los elementos
     const carruselButtonAnterior = document.getElementById('anterior');//boton anterior
     const carruselButtonSiguiente = document.getElementById('siguiente'); //boton siguiente
     //fija el ancho del elemento
@@ -29,14 +29,17 @@
         }
         carruselItems.style.transform = `translateX(-${currentPosition}px)`;
     });
+    */
     /*-----------------------------Validacion formulario-------------------------------*/
 
     var emailpattern = /^\w+@\w+(\.\w{2,4})+$/;
     var formpattern = /^[a-zA-Z]+$/;
 
+    let pEnviar = document.getElementById("pEnviar");
     const btnenviar = document.getElementById("btnenviar");
     const ltaErrores = document.getElementById("ltaErrores");
-    function validar(){
+    function validar(event){
+        event.preventDefault();
         let fnombre = document.getElementById("fnombre");
         let nombre = fnombre.value.trim();
 
@@ -82,7 +85,7 @@
             ftelefono.classList.add("error");
         }
 
-        ltaErrores.innerHTML = "";
+        ltaErrores.innerHTML = " ";
         if(errores.length > 0){
             for(let i=0;i<errores.length;i++){
                 let li=document.createElement("li");
