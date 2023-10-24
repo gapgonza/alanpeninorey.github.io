@@ -40,5 +40,5 @@ function validar(){
 
         let msj = `Hola ${nombre} ${apellido}, ¡Muchas gracias por su msj`;
         pEnviar.innerHTML = msj;/*es el espacio de abajo*/ 
-        return false; 
+        return false;
 }

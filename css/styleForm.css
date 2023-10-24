@@ -53,6 +53,11 @@ form{
     margin-bottom: 5px; /* Espacio debajo de cada elemento de la lista */
 }
 
-p{
-  color: green;  
+#pEnviar{ 
+    display: flex;
+    color: green;
+    background-color: aliceblue;
+    justify-content: center;
+    border-radius: 5px;
+    
 }
