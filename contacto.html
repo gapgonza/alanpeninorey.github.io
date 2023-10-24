@@ -1,42 +1,42 @@
 <!-- Página de Contacto -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Contacto</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="validacion.js"></script> 
+    <script src="validacion.js"></script>
 </head>
+
 <body>
     <div class="contenedor-header">
         <header>
             <nav>
-            <a href="index.html">Principal</a> 
-            <a href="articulo.html">Artículo</a> 
+                <a href="index.html">Principal</a>
+                <a href="articulo.html">Artículo</a>
             </nav>
         </header>
     </div>
-<!-- Campos del formulario -->
-<div class="contenedorgeneral">
-<h1>Formulario de contacto</h1>
-<form onsubmit="return validar(event)" id="FormularioDeContacto">
-        <label class="Acont forme" for="fnombre">Nombre: </label>
-        <input class="cont_" id="fnombre" name="fnombre" >
-        <label class="Acont forme" for="fapellido">Apellido: </label>
-        <input class="cont_" id="fapellido" name="fapellido">
-        <label class="Acont forme" for="femail">Email: </label>
-        <input class="cont_" id="femail" name="femail" >
-        <label class="Acont forme" for="ftelefono">Telefono: </label>
-        <input class="cont_" id="ftelefono" name="ftelefono" >
-        <label class="Acont forme" for="fmensaje">Mensaje:</label>
-        <textarea id="fmensaje" for="mensaje" name="fmensaje" ></textarea>
-        <button class="Acont forme2" type="submit" id="btnenviar">ENVIAR</button>
-        <div id="errorInput"> </div>
-                
-</form>
-<p id="pEnviar"></p>
+    <!-- Campos del formulario -->
+    <div class="contenedorgeneral">
+        <h1>Formulario de contacto</h1>
+        <form id="formulario-contacto" onsubmit="return validar()">
+            <label for="fnombre">Nombre:</label>
+            <input type="text" id="fnombre">
+            <label for="fapellido">apellido:</label>
+            <input type="text" id="fapellido">
+            <label for="femail">Email:</label>
+            <input type="text" id="femail">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje"></textarea>
 
+            <input type="submit" value="enviar">
+            <div id="errorInput">
 
+            </div>
+        </form>
 
-</div>
+    </div>
 </body>
+
 </html>
