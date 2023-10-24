@@ -1,12 +1,14 @@
 <!-- Página de Contacto -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./js/validacion.js"></script>
 </head>
+
 <body>
     <div class="contenedor-header">
         <header>
@@ -18,7 +20,8 @@
     </div>
     <div class="contenedorgeneral">
         <h1>Formulario de contacto</h1>
-        <form id="formulario-contacto" onsubmit="return validar()">
+        <form id="formulario-contacto" 
+        onsubmit="return validar()">
             <label for="fnombre">Nombre:</label>
             <input type="text" id="fnombre">
             <label for="fapellido">Apellido:</label>
@@ -32,6 +35,8 @@
             <div id="errorInput">
             </div>
         </form>
+        <p id="pEnviar"></p>
     </div>
 </body>
+
 </html>

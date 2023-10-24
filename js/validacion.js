@@ -6,8 +6,25 @@ function validar(){
 
     let errors = [];
 
-    if(!nombre || !apellido || !email ){
+    /*Para validar todos los campos solos*/
+    /*if(!nombre || !apellido || !email ){
         errors.push('Todos los elementos son obligatorios');
+    }*/
+
+    if(nombre == ""){
+        errors.push('Falta el Nombre')
+    }
+    if(apellido == ""){
+        errors.push('Falta el Apellido')
+    }
+    if(email == ""){
+        errors.push('Debe escribir un email valido')
+    }
+
+     /*Validación de uso de expresiones regulares (por ejemplo, para validar el formato del correo electrónico)*/
+    let patronCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!patronCorreo.test(email)) {
+        errors.push('El correo electrónico no es válido.');
     }
 
     if(errors.length>0){
@@ -20,4 +37,8 @@ function validar(){
         });
         return false;
     }
+
+        let msj = `Hola ${nombre} ${apellido}, ¡Muchas gracias por su msj`;
+        pEnviar.innerHTML = msj;/*es el espacio de abajo*/ 
+        return false; 
 }
