@@ -52,3 +52,7 @@ form{
     color: #721c24; /* Letras en rojo */
     margin-bottom: 5px; /* Espacio debajo de cada elemento de la lista */
 }
+
+p{
+  color: green;  
+}
