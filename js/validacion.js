@@ -27,9 +27,10 @@ function validar(){
         errors.push('El correo electrónico no es válido.');
     }
 
-    if(errors.length>0){
-        let errorElement = document.getElementById('errorInput');
+    let errorElement = document.getElementById('errorInput');
         errorElement.innerHTML = '';
+
+    if(errors.length>0){
         errors.forEach(function(error){
             let li = document.createElement('li');
             li.textContent = error;
