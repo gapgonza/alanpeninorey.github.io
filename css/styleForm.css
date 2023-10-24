@@ -1,3 +1,11 @@
+body {
+    background: url(/images/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
 .contenedor-header {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(70,121,159,1) 75%, rgba(29,0,255,1) 86%);
@@ -5,7 +13,14 @@
     padding: 20px;
     text-align: center;
 }
-
+nav a {
+    font-size: 25px;
+    color: rgb(196, 201, 184);
+    margin: 20px;
+    border: 1px solid rgb(99, 90, 180); /* Borde del botón */
+    border-radius: 5px; /* Borde redondeado */
+    display: inline-block; /* Hacer que los botones sean elementos en línea */
+  }
 .contenedorgeneral{
     display: flex;
     padding: 1rem 5rem 1rem 5rem;
