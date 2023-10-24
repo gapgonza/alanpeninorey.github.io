@@ -1,0 +1,39 @@
+.contenedor-header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(70,121,159,1) 75%, rgba(29,0,255,1) 86%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedorgeneral{
+    display: flex;
+    padding: 1rem 5rem 1rem 5rem;
+    background: rgb(100 100 100 / 59%);
+    flex-direction: column;
+}
+.contenedorgeneral h1{
+    margin: 0 auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 40rem;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.contenedorgeneral form textarea{
+    width: 634px;
+    height: 126px;
+}
+
+#errorInput{
+    background-color: #f8d7da;/*color de fondo*/
+    border-color: #f5c6cb;/*borde*/
+    border-radius: 6px;
+}
+#errorInput li {
+    color: #721c24; /* Letras en rojo */
+    margin-bottom: 5px; /* Espacio debajo de cada elemento de la lista */
+}
