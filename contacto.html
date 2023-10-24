@@ -1,0 +1,48 @@
+<!-- Página de Contacto -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/styleForm.css">
+    <script src="./js/validacion.js"></script>
+</head>
+
+<body>
+    <div class="contenedor-header">
+        <header>
+            <nav>
+                <a href="index.html">Principal</a>
+                <a href="articulo.html">Artículo</a>
+            </nav>
+        </header>
+    </div>
+    <div class="contenedorgeneral">
+        <h1>Formulario de contacto</h1>
+        <form id="formulario-contacto" 
+        onsubmit="return validar()">
+            <label for="fnombre">Nombre:</label>
+            <input type="text" id="fnombre">
+            <label for="fapellido">Apellido:</label>
+            <input type="text" id="fapellido">
+            <label for="femail">Email:</label>
+            <input type="text" id="femail">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje"></textarea>
+
+            <input type="submit" value="enviar">
+            <div id="errorInput">
+            </div>
+        </form>
+        <p id="pEnviar"></p>
+    </div>
+</body>
+<div>
+    <!-- Copyright -->
+    <footer id="copyright">
+        Alan Peñiñorey <NAME>. All rights reserved.<br>
+    </footer>
+</div>
+</html>
