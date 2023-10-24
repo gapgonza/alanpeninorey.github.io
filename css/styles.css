@@ -158,7 +158,7 @@ form{
 }
 .carrusel-items {
  display: flex;
- transition: transform 10s ease-in-out;
+ transition: transform .1s ease-in-out;
 }
 .carrusel-item {
 flex: 0 0 100%;
